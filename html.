@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Click Aral Website</title>
+  <link rel="icon" type="image/png" href="favic.png"> <!-- Favicon -->
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url("mybg.gif") no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      font-family: monospace;
+      text-align: center;
+    }
+    .content {
+      position: relative;
+      z-index: 2;
+      padding: 30px;
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 20px;
+      display: inline-block;
+      margin-top: 40px;
+    }
+    h1.typing-title {
+      font-size: 3em;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px red;
+      border-right: 2px solid red;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 32ch;
+      margin-left: auto;
+      margin-right: auto;
+      animation: typingTitle 5s steps(32), blink .75s step-end infinite;
+    }
+    h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      text-shadow: 0 0 15px white;
+    }
+    .products, .contacts {
+      margin: 20px 0;
+      font-size: 1.2em;
+    }
+    .product-box {
+      border: 2px solid white;
+      padding: 15px;
+      width: 200px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px white;
+      transition: 0.3s;
+      margin: 10px auto;
+    }
+    .product-box:hover {
+      background: rgba(255,255,255,0.1);
+      transform: scale(1.05);
+    }
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    /* Circle Logo */
+    .circle-logo {
+      margin: 20px auto;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      overflow: hidden;
+      box-shadow: 0 0 15px red;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .circle-logo:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 30px red;
+    }
+    .circle-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    /* Glitch Effect for Name */
+    .glitch {
+      font-size: 1.5em;
+      color: red;
+      position: relative;
+      animation: glitch 1s infinite;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+    @keyframes glitch {
+      0% { text-shadow: 2px 2px red; }
+      20% { text-shadow: -2px -2px #ff0000; }
+      40% { text-shadow: 2px -2px #ff4444; }
+      60% { text-shadow: -2px 2px #ff0000; }
+      80% { text-shadow: 2px 2px #ff2222; }
+      100% { text-shadow: none; }
+    }
+    /* Typing effect */
+    .typing {
+      font-size: 1.2em;
+      margin-top: 20px;
+      color: #fff;
+      border-right: 2px solid #fff;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 25ch;
+      margin-left: auto;
+      margin-right: auto;
+      animation: typing 5s steps(25), blink .75s step-end infinite;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 25ch }
+    }
+    @keyframes typingTitle {
+      from { width: 0 }
+      to { width: 32ch }
+    }
+    @keyframes blink {
+      50% { border-color: transparent }
+    }
+    /* Heart Button */
+    .heart {
+      font-size: 2em;
+      cursor: pointer;
+      color: #aaa;
+      transition: color 0.3s;
+    }
+    .heart.liked {
+      color: red;
+    }
+    .stats {
+      margin-top: 20px;
+      font-size: 1em;
+    }
+    /* Hall of Fame */
+    .hall-of-fame {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 60px;
+      margin-top: 30px;
+    }
+    .hof-item {
+      text-align: center;
+    }
+    .hof-item img {
+      width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      box-shadow: 0 0 15px white;
+    }
+    .hof-item p {
+      margin-top: 10px;
+      font-size: 1em;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="content">
+    <h1 class="typing-title">GROUP 6</h1>
+
+    <div class="products">
+      <h2>Products</h2>
+      <div class="product-box">CSS MODULE WEEK 1-2</div>
+      <div class="product-box">CSS MODULE WEEK 3-4</div>
+      <div class="product-box">CSS MODULE WEEK 5-6</div>
+    </div>
+
+    <div class="contacts">
+      <h2>Contact Me</h2>
+      <ul>
+        <li>Email: <a href="mailto:xkxnxdex@gmail.com">xkxnxdex@gmail.com</a></li>
+        <li>Instagram: <a href="https://instagram.com/_https.xkxnx" target="_blank">@_https.xkxnx</a></li>
+      </ul>
+    </div>
+
+    <!-- Circle Logo clickable to Discord -->
+    <a href="https://discord.com/users/768383488449183745" target="_blank">
+      <div class="circle-logo">
+        <img src="mylogo.png" alt="My Custom Logo">
+      </div>
+    </a>
+    <div class="glitch">XKXNX-FATHER</div>
+
+    <!-- Typing Quotes -->
+    <div class="typing">" Do you love xkxnx.... ? "</div>
+
+    <!-- Heart + View Counter -->
+    <div class="stats">
+      <span id="heartBtn" class="heart">&#10084;</span>
+      <span id="heartCount">0</span> Hearts <br>
+      👁 <span id="viewCount">0</span> Views
+    </div>
+
+    <!-- Background Music Player -->
+    <div style="margin-top:20px;">
+      <audio id="bgMusic" loop>
+        <source src="music.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+      </audio>
+      <button onclick="document.getElementById('bgMusic').play()">▶ Play</button>
+      <button onclick="document.getElementById('bgMusic').pause()">⏸ Stop</button>
+    </div>
+
+    <!-- Hall of Fame Section -->
+    <div class="hall-of-fame">
+      <div class="hof-item">
+        <img src="cris.png" alt="Cris">
+        <p>Cris Givenchy</p>
+      </div>
+      <div class="hof-item">
+        <img src="bishop.png" alt="Bishop">
+        <p>Bishop Quinn Givenchy</p>
+      </div>
+      <div class="hof-item">
+        <img src="pita.jpg" alt="Pita">
+        <p>Pita Givenchy</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    // CountAPI namespace para stable data
+    const NAMESPACE = "xkxnx-official-world";
+
+    // Viewer Counter (CountAPI)
+    fetch(`https://api.countapi.xyz/hit/${NAMESPACE}/visits`)
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById("viewCount").innerText = data.value;
+      });
+
+    // Heart Counter
+    const heartBtn = document.getElementById("heartBtn");
+    const heartCount = document.getElementById("heartCount");
+
+    fetch(`https://api.countapi.xyz/get/${NAMESPACE}/hearts`)
+      .then(res => res.json())
+      .then(data => {
+        heartCount.innerText = data.value || 0;
+      });
+
+    heartBtn.addEventListener("click", () => {
+      heartBtn.classList.add("liked");
+      fetch(`https://api.countapi.xyz/hit/${NAMESPACE}/hearts`)
+        .then(res => res.json())
+        .then(data => {
+          heartCount.innerText = data.value;
+        });
+    });
+  </script>
+
+</body>
+  </html>
